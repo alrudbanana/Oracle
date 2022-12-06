@@ -61,7 +61,7 @@ where hiredate >='81/04/01' or hiredate < '81/12/01';
 --<문제8> 직책(job) salesman 이면서 월급이 1500이상이면서 부서번호가 30인 사원명을 출력
 select job 직책, salary 월급, dno 부서번호 
 from employee
-where job = 'SALESMAN' and salary  > 1500 and dno = 30;
+where job = 'SALESMAN' and salary  >= 1500 and dno = 30;
 --<문제9> 월급이 1500이하이면서 부서번호가 20번이 아닌 사원이름과, 월급과 부서번호를 출력
 select salary 월급, ename 사원이름, dno 부서번호 
 from employee
