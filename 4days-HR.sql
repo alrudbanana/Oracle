@@ -68,7 +68,7 @@ select * from dept;
     
     select * from dept;
     desc dept;
-
+--명시적으로 null 
 --컬럼과 값의 순서가 맞아야한다. 
 insert into dept (dno,loc,dname)
 values(20,'BUSAN','SALE');
@@ -93,7 +93,8 @@ create table member (
     weight number (5, 2) not null
     );
     
-/* 제약조건 
+/* 제약조건 : 데이터의 무결성을 확보하기 위해서 테이블의 컬럼에 부여 
+        - 무결성 : 오류없는 데이터, 원하는 데이터 
     --primary key : 테이블에서 하나만 존재 할 수 있다.
         --primary key 가 적용된 컬럼은 중복된 값을 넣을 수 없다
         --데이터를 수정 할 때 삭제시 조건을 사용하는 컬럼.
@@ -357,3 +358,7 @@ values(3333,'aaaa',default);
 
 --테이블 삭제 
 drop table member;
+
+--원하는 테이블의 제약 조건 확인 
+select * from user_constraints
+where table_name = 'EMPLOYEE';

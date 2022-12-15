@@ -4,7 +4,7 @@ zipcode varchar2(7)constraint tb_zipcode_PK primary key,
 sido varchar2(30),
 gugum varchar2(30),
 dong varchar2(30),
-bungi varchar2(30)
+bungi varchar2(30) default 1000
 );
  drop table tb_zibcode;
 -- 값 넣기 
@@ -71,6 +71,8 @@ create table products (
   useyn char(1),
   indate date
   );
+  
+
   
 insert into products
 values ('abc','스투시','1',40000,0,'기모후드','사진없음','XL','s','1','0','2022-12-01');
